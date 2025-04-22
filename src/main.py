@@ -10,8 +10,9 @@ from pathlib import Path
 
 from fs import FS
 from logging_manager import LoggingManager
-from app import AudioLooperApp
+from app import AudioLoopManager
 import logging
+from tui import TUI
 
 def print_message(message: str, message_type: str) -> None:
     """
@@ -45,8 +46,9 @@ def main() -> None:
     
     try:
         # Launch the application
-        app = AudioLooperApp()
-        app.run()
+        app = AudioLoopManager()
+        ui = TUI(app)
+        ui.start()
     except Exception as e:
         # Log any unhandled exceptions
         import logging

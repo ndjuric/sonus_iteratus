@@ -1,22 +1,15 @@
 #!/usr/bin/env python
-import curses
 import logging
 import signal
 import sys
-from pathlib import Path
-from typing import Optional, Tuple, List
-
-import librosa
-import numpy as np
+from typing import Optional
 import argparse
-from datetime import datetime
 from fs import FS
 from audio_processor import SirenLooper
-from models import LoopCandidate, ProcessResult
-from tui import TUI
 
 
-class AudioLooperApp:
+
+class AudioLoopManager:
     """
     Main application class that orchestrates the audio looping process.
     """
@@ -107,8 +100,3 @@ class AudioLooperApp:
                 logging.error(f"Error during retry {attempt}: {e}")
                 
         return False
-
-    def run(self) -> None:
-        # Launch the text-based UI
-        ui = TUI(self)
-        ui.start()
