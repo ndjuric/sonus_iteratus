@@ -1,4 +1,4 @@
-# 🎵 Loopify 🔄
+# 🎵 Sonus Iteratus 🔄
 
 [![Stars](https://img.shields.io/github/stars/ndjuric/sonus_iteratus?style=flat-square&logo=github)](https://github.com/ndjuric/sonus_iteratus/stargazers)
 [![Forks](https://img.shields.io/github/forks/ndjuric/sonus_iteratus?style=flat-square&logo=github)](https://github.com/ndjuric/sonus_iteratus/network)
