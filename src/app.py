@@ -211,8 +211,8 @@ class AudioLooperApp:
         parser.add_argument(
             "--peak-threshold",
             type=float,
-            default=0.5,  # Adjusted for better default behavior
-            help="Peak height threshold for loop extraction (default: 0.5)"
+            default=0.3,  # Adjusted to match audio_processor default threshold
+            help="Peak height threshold for loop extraction (default: 0.3)"
         )
         return parser.parse_args()
 

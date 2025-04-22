@@ -72,6 +72,8 @@ class SirenLooper:
             
         min_loop_samples: int = int(self.min_loop_duration_sec * self.sr)
         hop_length: int = 512
+        # Ensure distance parameter for peak detection is at least 1
+        distance = max(min_loop_samples // hop_length, 1)
         
         # Extract chroma features
         chroma: np.ndarray = librosa.feature.chroma_cqt(y=self.y, sr=self.sr, hop_length=hop_length)
@@ -87,7 +89,7 @@ class SirenLooper:
         
         # Find peaks in the similarity matrix
         peaks, _ = find_peaks(
-            ssm_smooth.flatten(), height=self.peak_height_threshold, distance=min_loop_samples // hop_length
+            ssm_smooth.flatten(), height=self.peak_height_threshold, distance=distance
         )
         
         # Convert peak indices to coordinates
