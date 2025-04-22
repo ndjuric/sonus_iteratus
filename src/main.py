@@ -10,8 +10,7 @@ from pathlib import Path
 
 from fs import FS
 from logging_manager import LoggingManager
-from app import AudioLoopManager
-import logging
+from audio_loop_manager import AudioLoopManager
 from tui import TUI
 
 def print_message(message: str, message_type: str) -> None:
