@@ -245,10 +245,8 @@ class AudioLooperApp:
             audio_duration = self.ui.run_with_progress("Analyzing audio file...", get_audio_duration)
             self.ui.display_info(f"Audio length is {audio_duration:.2f} seconds.")
             
-            # Get target duration from user
-            target_duration = self.ui.get_target_duration(audio_duration)
-            return selected_file, target_duration
-            
+            # Return selected file; target duration will be prompted after loop detection
+            return selected_file, None
         except Exception as e:
             self.ui.display_error(f"Failed to analyze audio file: {e}")
             return None, None
@@ -309,7 +307,7 @@ class AudioLooperApp:
             return True
 
         self.ui.run_with_progress("Checking file format...", check_file_format)
-        self.ui.console.print("[purple][green *] {self.audio_file} is a valid WAV file!")
+        self.ui.console.print(f"[purple][green *] {self.audio_file} is a valid WAV file!")
 
         # Create the SirenLooper instance
         looper = SirenLooper(
