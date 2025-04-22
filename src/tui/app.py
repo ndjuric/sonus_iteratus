@@ -1,4 +1,4 @@
-"""Text-based User Interface for the AudioLooperApp using curses."""
+#!/usr/bin/env python
 
 class TUI:
     """Text-based UI controller for the AudioLooperApp."""
@@ -171,4 +171,3 @@ class TUI:
                 selected.unlink()
                 ts = datetime.now().strftime("%H:%M:%S")
                 log_pane.add_message(f"{ts} Deleted {selected.name}")
-        # End of main loop
