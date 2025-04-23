@@ -22,7 +22,7 @@ A simple way to find seamless audio subsamples inside your already short audio s
     * [5.3 Subsample Selection: Fine-Grained Control](#53-subsample-selection)
     * [5.4 Output Duration: Tailoring Your Soundscape](#54-output-duration)
     * [5.5 Output Management: Your Sonic Command Center](#55-output-management)
-6.  [Demo: See Audionaut in Action](#6-demo)
+6.  [Demo: See how it Works](#6-demo)
 7.  [Installation: Get Started in Minutes](#7-installation)
 8.  [License](#8-license)
 9.  [Contributing: Join the Noise!](#9-contributing)
@@ -109,9 +109,9 @@ Output filenames are automatically generated, including the original sample name
 
 ---
 
-## 6. 🎬 Demo: See Audionaut in Action
+## 6. 🎬 Demo: See how it Works
 
-**Get a quick visual overview of how to use Audionaut:**
+**Get a quick visual overview of how to use the tool:**
 
 [![asciicast](https://asciinema.org/a/JJTpunHVlXK6X5bWUCvVSLpjA.svg)](https://asciinema.org/a/JJTpunHVlXK6X5bWUCvVSLpjA)
 
